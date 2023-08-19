@@ -117,7 +117,7 @@ public class ExampleEurekaClient {
     }
 
     /**
-     * 注入相关配置
+     * 注入相关配置环境信息
      * @throws UnknownHostException
      */
     private static void injectEurekaConfiguration() throws UnknownHostException {
@@ -138,6 +138,7 @@ public class ExampleEurekaClient {
         System.setProperty("eureka.numberRegistrySyncRetries", "0");
     }
     public static void main(String[] args) throws Exception {
+        // 首先注入相关配置
         injectEurekaConfiguration();
 
         ExampleEurekaClient sampleClient = new ExampleEurekaClient();
