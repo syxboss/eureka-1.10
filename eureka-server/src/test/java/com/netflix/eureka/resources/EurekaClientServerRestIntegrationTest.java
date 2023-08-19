@@ -230,7 +230,9 @@ public class EurekaClientServerRestIntegrationTest {
     }
 
     private static void startServer() throws Exception {
-        /*File warFile = findWar(); //每次都需要打成一个war包
+        // 由于本地测试，希望能在本地能打断点调试，因此此处注释掉
+        // 每次都需要打成一个war包
+        /*File warFile = findWar();
 
         server = new Server(8080);
 
